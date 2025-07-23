@@ -32,3 +32,4 @@ export async function removerToken(): Promise<void> {
         console.error('Erro ao remover token:', erro);
     }
 }
+

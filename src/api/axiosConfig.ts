@@ -30,7 +30,8 @@ api.interceptors.response.use(
         if(erro.response && erro.response.status === 401) {
             await removerToken();
             console.warn('Token de autenticação expirado ou invalido. Realize o login novamente');
-        }
+            erro.message = 'Sessão expirada. Faça login novamente';
+        }   
         return Promise.reject(erro);
     }
 );

@@ -1,13 +1,16 @@
+import { removerToken } from "../servicos/servicosArmazenamento";
+import TelaProdutos from "../telas/TelaProdutos";
+
 export interface CredenciaisLogin{
-    Usuario: string;
+    usuario: string;
     senha: string;
 
 }
 
 //Exemplo ficticio da credenciais 
 const credenciaisLogin: CredenciaisLogin = {
-    Usuario: 'Ana Alice',
-    senha: 'ana123'
+    usuario:  'mor_2314',
+    senha: '83r5^_'
 };
 
 //Define o formato da resposta da API de login
@@ -16,7 +19,9 @@ export interface RespostaLoginAPI {
 }
 const respostaLoginAPI: RespostaLoginAPI ={
     token: "200"// Exemplo ficticio do token
+
 };
+
 
 export interface ProdutoAPI {
     id: number;

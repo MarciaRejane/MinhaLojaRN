@@ -7,7 +7,7 @@ export async function realizarLogin(credenciais: CredenciaisLogin):
   try {
      // Faz uma requisição POST para o endpoint 'auth/login' da Fake Store API
     const resposta = await api.post<RespostaLoginAPI>('auth/login', {
-      username: credenciais.Usuario,
+      username: credenciais.usuario,
       password: credenciais.senha,
     });
     return resposta.data;
